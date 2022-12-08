@@ -1,0 +1,8 @@
+.productImage {
+  width: 150px;
+  height: 200px;
+}
+
+.productBody {
+  height: 180px !important;
+}
