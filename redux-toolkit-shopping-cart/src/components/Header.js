@@ -4,7 +4,10 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const cart = useSelector((state) => state.cart);
   return (
-    <nav className="navbar navbar-expand-lg bg-white">
+    <nav
+      className="navbar navbar-expand-lg bg-white"
+      style={{ position: "sticky", top: "0", zIndex: 150 }}
+    >
       <div className="container-fluid">
         <Link className="navbar-brand" to="/home">
           Redux Cart

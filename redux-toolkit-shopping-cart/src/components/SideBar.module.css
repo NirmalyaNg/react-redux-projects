@@ -1,0 +1,28 @@
+.sidebarToggler {
+  position: fixed;
+  top: 60px;
+  left: 7px;
+  border-radius: 50%;
+  padding: 5px 20px;
+  background-color: white;
+  border: none;
+  font-size: 30px;
+  -webkit-box-shadow: -5px 11px 24px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -5px 11px 24px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 11px 24px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarToggler:hover {
+  background-color: #0984e3;
+  color: white;
+}
+
+.sidebarBackdrop {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
