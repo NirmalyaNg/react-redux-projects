@@ -14,7 +14,6 @@ const SideBar = () => {
       try {
         const response = await fetch("https://fakestoreapi.com/products/categories");
         const categories = await response.json();
-        console.log(categories);
         setCategories(categories);
       } catch (e) {
         setCategories([]);
@@ -31,7 +30,9 @@ const SideBar = () => {
       >
         <i className="fa-solid fa-caret-right"></i>
       </button>
-      {showSidebarContent && <div className={`${classes.sidebarBackdrop}`}></div>}
+      {showSidebarContent && (
+        <div className={`${classes.sidebarBackdrop}`} onClick={handleSidebarClose}></div>
+      )}
       <SidebarContent
         categories={categories}
         onClose={handleSidebarClose}

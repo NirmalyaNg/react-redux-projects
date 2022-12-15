@@ -8,7 +8,7 @@ import { fetchProducts } from "../store/product/productSlice";
 const Home = () => {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.product);
-
+  const isFilterMode = product.filterMode;
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
@@ -22,7 +22,13 @@ const Home = () => {
             {product.error && <h5 className="text-center">Unable to fetch products</h5>}
             {product.loading && <LoadingSpinner />}
             {!product.loading &&
+              !isFilterMode &&
               product.products.map((product) => <Product key={product.id} data={product} />)}
+            {!product.loading &&
+              isFilterMode &&
+              product.filteredProducts.map((product) => (
+                <Product key={product.id} data={product} />
+              ))}
           </div>
         </div>
       </div>
